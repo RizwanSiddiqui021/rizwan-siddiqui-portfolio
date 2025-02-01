@@ -8,18 +8,41 @@
     <script src="./tailwind.config.js"></script>
   </head>
   <body>
-    <nav>
-      <img src="./images/logo.png" alt="Logo" />
-      <ul>
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+      <img src="./images/header-bg-color.png" alt="" class="w-full" />
+    </div>
+
+    <!-- nav-bar-section -->
+    <nav
+      class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-21"
+    >
+      <img
+        class="w-36 cursor-pointer mr-14"
+        src="./images/logo.png"
+        alt="Logo"
+      />
+      <ul
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50"
+      >
         <li><a href="#home">Home</a></li>
-        <li><a href="#about Me">About Me</a></li>
+        <li><a href="#about Me">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact"
-        >Contact <img src="./images/arrow-icon.png" alt=""
-      /></a>
+
+      <div class="flex items-center gap-4">
+        <button>
+          <img src="./images/moon_icon.png" alt="Moon" class="w-6" />
+        </button>
+
+        <a
+          class="hidden md:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+          href="#contact"
+          >Contact <img src="./images/arrow-icon.png" alt="" class="w-3"
+        /></a>
+      </div>
     </nav>
+    <!-- nav-bar-section -->
   </body>
 </html>
