@@ -7,14 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
       <img src="./images/header-bg-color.png" alt="" class="w-full" />
     </div>
 
-    <!-- nav-bar-section -->
+    <!-- nav-bar-section-start -->
     <nav
-      class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-21"
+      class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50"
     >
       <img
         class="w-36 cursor-pointer mr-14"
@@ -25,7 +25,7 @@
         class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50"
       >
         <li><a href="#home">Home</a></li>
-        <li><a href="#about Me">About</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -41,8 +41,33 @@
           href="#contact"
           >Contact <img src="./images/arrow-icon.png" alt="" class="w-3"
         /></a>
+
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+          <img src="./images/menu-black.png" alt="" class="w-6" />
+        </button>
       </div>
+
+      <!-- mobile-menu-start -->
+      <ul
+        id="sideMenu"
+        class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-sky-50 transition duration-500"
+      >
+        <div class="absolute right-6 top-6" onclick="closeMenu()">
+          <img
+            src="./images/close-black.png"
+            alt=""
+            class="w-5 cursor-pointer"
+          />
+        </div>
+        <li><a href="#home" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+      </ul>
+      <!-- mobile-menu-end -->
     </nav>
-    <!-- nav-bar-section -->
+    <!-- nav-bar-section-end -->
+    <script src="./script.js"></script>
   </body>
 </html>
