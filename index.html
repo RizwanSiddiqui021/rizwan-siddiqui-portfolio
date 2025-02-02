@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <title>Portfolio | Rizwan Siddiqui</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
@@ -50,7 +51,7 @@
       <!-- mobile-menu-start -->
       <ul
         id="sideMenu"
-        class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-sky-50 transition duration-500"
+        class="flex md:hidden flex-col gap-5 py-20 px-10 fixed -right-64 top-0 bottom-0 w-[50%] z-50 h-screen bg-[#8ddfff] transition duration-500"
       >
         <div class="absolute right-6 top-6" onclick="closeMenu()">
           <img
@@ -60,14 +61,54 @@
           />
         </div>
         <li><a href="#home" onclick="closeMenu()">Home</a></li>
-        <li><a href="#about" onclick="closeMenu()">About</a></li>
-        <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-        <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        <li>
+          <a href="#about" onclick="closeMenu()">About</a>
+        </li>
+        <li>
+          <a href="#skills" onclick="closeMenu()">Skills</a>
+        </li>
+        <li>
+          <a href="#projects" onclick="closeMenu()">Projects</a>
+        </li>
+        <li>
+          <a href="#contact" onclick="closeMenu()">Contact</a>
+        </li>
       </ul>
       <!-- mobile-menu-end -->
     </nav>
     <!-- nav-bar-section-end -->
+
+    <!-- header-section -->
+    <div
+      class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4"
+    >
+      <img src="images/profile-img.png" alt="" class="rounded-full w-48" />
+      <h3 class="text-xl md:text-2xl mb-3">Hi! I'm Rizwan Siddiqui</h3>
+      <h1 class="text-3xl sm:text-6xl lg:text-[66px]">
+        frontend web developer
+      </h1>
+      <p class="max-w-2xl mx-auto">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum eveniet
+        sequi repellat fugit explicabo rerum ducimus sunt temporibus nulla
+        dignissimos.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a
+          href="#contact"
+          class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#61d0f5] to-[#3771f8] text-white flex items-center gap-2"
+          >Contact Me
+          <img src="./images/right-arrow-white.png" alt="" class="w-4"
+        /></a>
+        <a
+          href="./images/Rizwan_Siddiqui_Resume.pdf"
+          download
+          class="px-10 py-3 border rounded-full border-gray-500 bg-white flex items-center gap-2"
+          >My Resume <img src="./images/download-icon.png" alt="" class="w-4"
+        /></a>
+      </div>
+    </div>
+    <!-- header-section -->
     <script src="./script.js"></script>
   </body>
 </html>

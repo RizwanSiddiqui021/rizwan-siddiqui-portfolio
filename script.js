@@ -1,3 +1,4 @@
+// mobile-menu-functions
 const sideMenu = document.querySelector("#sideMenu");
 
 function openMenu() {
@@ -7,3 +8,4 @@ function openMenu() {
 function closeMenu() {
   sideMenu.style.transform = "translateX(16rem)";
 }
+// mobile-menu-functions
