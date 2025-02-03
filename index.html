@@ -213,7 +213,7 @@
       <h2 class="text-center text-5xl">My Projects</h2>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 gap-5 lg:gap-12"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 gap-5 lg:gap-10"
       >
         <!------- project-1 ------->
         <div
@@ -371,9 +371,103 @@
             </div>
           </div>
         </div>
+        <!------- project-7 ------->
+        <div
+          class="aspect-square border border-gray-500 bg-[url('./images/work-7.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-semibold">Mortgage Calculator</h2>
+            </div>
+            <div class="flex gap-6">
+              <a
+                href="https://github.com/RizwanSiddiqui021/Mortgage-Calculator"
+                target="_blank"
+                class="text-gray-700 underline"
+                >Code</a
+              >
+              <a
+                href="https://mortgage-calculator-rizwan.surge.sh/"
+                target="_blank"
+                class="text-gray-700 underline"
+                >Demo</a
+              >
+            </div>
+          </div>
+        </div>
+        <!------- project-8 ------->
+        <div
+          class="aspect-square border border-gray-500 bg-[url('./images/work-8.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-semibold">G3 Architects Website</h2>
+            </div>
+            <div class="flex gap-6">
+              <a
+                href="https://github.com/RizwanSiddiqui021/g3-architects-website"
+                target="_blank"
+                class="text-gray-700 underline"
+                >Code</a
+              >
+              <a
+                href="https://rizwansiddiqui021.github.io/g3-architects-website/"
+                target="_blank"
+                class="text-gray-700 underline"
+                >Demo</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!--------------------------- projects-section-end --------------------------->
+
+    <!--------------------------- contact-section-start --------------------------->
+    <div
+      id="contact"
+      class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center"
+    >
+      <h4 class="text-center mb-2 text-lg">Connect With Me</h4>
+      <h2 class="text-center text-5xl">Get in touch</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+        I'd love to hear from you! If you have any questions, comments or
+        feedback, please use the form below.
+      </p>
+      <form action="" class="max-w-2xl mx-auto">
+        <div class="grid grid-cols-2 gap-6 mt-10 mb-8">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            required
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+          />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+          />
+        </div>
+        <textarea
+          rows="6"
+          placeholder="Enter your message"
+          required
+          class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+        ></textarea>
+        <button
+          class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500"
+        >
+          Submit Now
+          <img src="./images/right-arrow-white.png" alt="" class="w-4" />
+        </button>
+      </form>
+    </div>
+    <!--------------------------- contact-section-end --------------------------->
     <script src="./script.js"></script>
   </body>
 </html>
