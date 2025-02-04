@@ -16,18 +16,58 @@ window.addEventListener("scroll", () => {
   if (scrollY > 50) {
     navBar.classList.add(
       "bg-white",
-      "bg-opacity-50",
+      "bg-opacity-75",
       "backdrop-blur-lg",
-      "shadow-sm"
+      "shadow-sm",
+      "dark:bg-darkTheme",
+      "dark:bg-opacity-75",
+      "dark:shadow-white/20"
     );
-    navLinks.classList.remove("bg-white", "bg-opacity-50", "shadow-sm");
+    navLinks.classList.remove(
+      "bg-white",
+      "bg-opacity-75",
+      "shadow-sm",
+      "dark:border",
+      "dark:border-white/90",
+      "dark:bg-transparent"
+    );
   } else {
     navBar.classList.remove(
       "bg-white",
-      "bg-opacity-50",
+      "bg-opacity-75",
       "backdrop-blur-lg",
-      "shadow-sm"
+      "shadow-sm",
+      "dark:bg-darkTheme",
+      "dark:bg-opacity-75",
+      "dark:shadow-white/20"
     );
-    navLinks.classList.add("bg-white", "bg-opacity-50", "shadow-sm");
+    navLinks.classList.add(
+      "bg-white",
+      "bg-opacity-75",
+      "shadow-sm",
+      "dark:border",
+      "dark:border-white/90",
+      "dark:bg-transparent"
+    );
   }
 });
+
+//dark-mode-function
+if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-sceme: dark)").matches)
+) {
+  document.documentElement.classList.add("dark");
+} else {
+  document.documentElement.classList.remove("dark");
+}
+
+function toggleTheme() {
+  document.documentElement.classList.toggle("dark");
+  if (document.documentElement.classList.contains("dark")) {
+    localStorage.theme = "dark";
+  } else {
+    localStorage.theme = "light";
+  }
+}

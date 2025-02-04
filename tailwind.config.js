@@ -9,9 +9,12 @@ tailwind.config = {
         spin_slow: "spin 6s linear infinite",
       },
       colors: {
-        lightHover: "#f2fdff",
+        lightHover: "#F0F8FF",
         darkHover: "#2a004a",
+        customBg: "#F0F8FF",
+        darkTheme: "#11001F",
       },
     },
   },
+  darkMode: "selector",
 };

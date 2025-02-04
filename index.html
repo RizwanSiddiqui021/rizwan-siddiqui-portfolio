@@ -18,8 +18,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
   </head>
-  <body class="overflow-x-hidden font-Outfit leading-8">
-    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-90%]">
+  <body
+    class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white"
+  >
+    <div
+      class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-90%] dark:hidden"
+    >
       <img src="./images/header-bg-color.png" alt="" class="w-full" />
     </div>
 
@@ -27,15 +31,23 @@
     <nav
       class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50"
     >
-      <a href=""
-        ><img
-          class="w-36 cursor-pointer mr-14"
+      <a href="">
+        <img
+          class="w-36 cursor-pointer mr-14 dark:hidden"
           src="./images/logo.png"
           alt="Logo"
-      /></a>
+        />
+
+        <img
+          class="w-36 cursor-pointer mr-14 hidden dark:block"
+          src="./images/logo-dark.png"
+          alt="Logo"
+        />
+      </a>
+
       <!-- nav-links -->
       <ul
-        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo"
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/90 dark:bg-transparent"
       >
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -45,25 +57,46 @@
       </ul>
 
       <div class="flex items-center gap-4">
-        <button>
-          <img src="./images/moon_icon.png" alt="Moon" class="w-6" />
+        <button onclick="toggleTheme()">
+          <img
+            src="./images/moon-icon.png"
+            alt="Moon"
+            class="w-6 dark:hidden"
+          />
+          <img
+            src="./images/sun-icon.png"
+            alt="Moon"
+            class="w-6 hidden dark:block"
+          />
         </button>
 
         <a
-          class="hidden md:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo"
           href="#footer"
-          >Hire Me<img src="./images/arrow-icon.png" alt="" class="w-3"
+          class="hidden md:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/90"
+          >Hire Me<img
+            src="./images/arrow-icon.png"
+            alt=""
+            class="w-3 dark:hidden" />
+          <img
+            src="./images/arrow-icon-dark.png"
+            alt=""
+            class="w-3 hidden dark:block"
         /></a>
 
         <button class="block md:hidden ml-3" onclick="openMenu()">
-          <img src="./images/menu-black.png" alt="" class="w-6" />
+          <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden" />
+          <img
+            src="./images/menu-white.png"
+            alt=""
+            class="w-6 hidden dark:block"
+          />
         </button>
       </div>
 
       <!--------------------------- mobile-menu-start --------------------------->
       <ul
         id="sideMenu"
-        class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-[50%] z-50 h-screen bg-[#8ddfff] transition duration-500 font-Ovo"
+        class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-[50%] z-50 h-screen bg-[#8ddfff] transition duration-500 font-Ovo dark:text-black"
       >
         <div class="absolute right-6 top-6" onclick="closeMenu()">
           <img
@@ -111,14 +144,14 @@
       <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <a
           href="#contact"
-          class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#65d9ff] to-[#529dff] text-white flex items-center gap-2"
+          class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#65d9ff] to-[#529dff] text-white flex items-center gap-2 dark:border-transparent"
           >Contact Me
           <img src="./images/right-arrow-white.png" alt="" class="w-4"
         /></a>
         <a
           href="./images/Rizwan_Siddiqui_Resume-1.png"
           download
-          class="px-10 py-3 border border-gray-500 rounded-full bg-white flex items-center gap-2 my-resume"
+          class="px-10 py-3 border border-gray-500 rounded-full bg-white flex items-center gap-2 bg-white dark:text-black"
           >My Resume <img src="./images/download-icon.png" alt="" class="w-4"
         /></a>
       </div>
@@ -158,27 +191,64 @@
             user-friendly interfaces. Currently, I'm expanding my skills through
             working on React projects.
           </p>
-          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl font-Ovo">
+          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             <li
-              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
             >
-              <img src="./images/code-icon.png" alt="" class="w-7 mt-3" />
-              <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
-              <p>HTML5, CSS, JavaScript, Python, C++, Java</p>
+              <img
+                src="./images/code-icon.png"
+                alt=""
+                class="w-7 mt-3 dark:hidden"
+              />
+              <img
+                src="./images/code-icon-dark.png"
+                alt=""
+                class="w-7 mt-3 hidden dark:block"
+              />
+              <h3 class="my-4 font-semibold text-gray-700 dark:text-white">
+                Languages
+              </h3>
+              <p class="dark:text-white/80">
+                HTML5, CSS, JavaScript, Python, C++, Java
+              </p>
             </li>
             <li
-              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
             >
-              <img src="./images/edu-icon.png" alt="" class="w-7 mt-3" />
-              <h3 class="my-4 font-semibold text-gray-700">Education</h3>
-              <p>IUBAT - BSc in Computer Science and Engineering</p>
+              <img
+                src="./images/edu-icon.png"
+                alt=""
+                class="w-7 mt-3 dark:hidden"
+              />
+              <img
+                src="./images/edu-icon-dark.png"
+                alt=""
+                class="w-7 mt-3 hidden dark:block"
+              />
+              <h3 class="my-4 font-semibold text-gray-700 dark:text-white">
+                Education
+              </h3>
+              <p class="dark:text-white/80">
+                IUBAT - BSc in Computer Science and Engineering
+              </p>
             </li>
             <li
-              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
             >
-              <img src="./images/project-icon.png" alt="" class="w-7 mt-3" />
-              <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
-              <p>Built more than 10 projetcs</p>
+              <img
+                src="./images/project-icon.png"
+                alt=""
+                class="w-7 mt-3 dark:hidden"
+              />
+              <img
+                src="./images/project-icon-dark.png"
+                alt=""
+                class="w-7 mt-3 hidden dark:block"
+              />
+              <h3 class="my-4 font-semibold text-gray-700 dark:text-white">
+                Projects
+              </h3>
+              <p class="dark:text-white/80">Built more than 10 projetcs</p>
             </li>
           </ul>
           <h4 class="mt-6 mb-2 text-gray-700 font-semibold font-Ovo">
@@ -306,7 +376,7 @@
           class="aspect-square border border-gray-500 bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
         >
           <div
-            class="bg-[#a7e6ff] w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+            class="bg-customBg w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
           >
             <div>
               <h2 class="font-semibold">RealEstate Website</h2>
@@ -332,7 +402,7 @@
           class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
         >
           <div
-            class="bg-[#a7e6ff] w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+            class="bg-customBg w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
           >
             <div>
               <h2 class="font-semibold">Ultimate Cricket Team</h2>
@@ -358,7 +428,7 @@
           class="aspect-square border border-gray-500 bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
         >
           <div
-            class="bg-[#a7e6ff] w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+            class="bg-customBg w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
           >
             <div>
               <h2 class="font-semibold">Peddy - Pet Shop</h2>
@@ -384,7 +454,7 @@
           class="aspect-square border border-gray-500 bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
         >
           <div
-            class="bg-[#a7e6ff] w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+            class="bg-customBg w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
           >
             <div>
               <h2 class="font-semibold">Donate Bangladesh</h2>
@@ -410,7 +480,7 @@
           class="aspect-square border border-gray-500 bg-[url('./images/work-5.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
         >
           <div
-            class="bg-[#a7e6ff] w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+            class="bg-customBg w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
           >
             <div>
               <h2 class="font-semibold">Rinterio</h2>
@@ -436,7 +506,7 @@
           class="aspect-square border border-gray-500 bg-[url('./images/work-6.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
         >
           <div
-            class="bg-[#a7e6ff] w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+            class="bg-customBg w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
           >
             <div>
               <h2 class="font-semibold">Fitness</h2>
@@ -462,7 +532,7 @@
           class="aspect-square border border-gray-500 bg-[url('./images/work-7.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
         >
           <div
-            class="bg-[#a7e6ff] w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+            class="bg-customBg w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
           >
             <div>
               <h2 class="font-semibold">Mortgage Calculator</h2>
@@ -488,7 +558,7 @@
           class="aspect-square border border-gray-500 bg-[url('./images/work-8.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
         >
           <div
-            class="bg-[#a7e6ff] w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
+            class="bg-customBg w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7"
           >
             <div>
               <h2 class="font-semibold">G3 Architects Website</h2>
