@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./images/dev_icon.png"
+      href="./images/fav_icon.png"
       type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap"
+      rel="stylesheet"
     />
     <title>Portfolio | Rizwan Siddiqui</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
   </head>
-  <body class="overflow-x-hidden">
+  <body class="overflow-x-hidden font-Outfit leading-8">
     <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-90%]">
       <img src="./images/header-bg-color.png" alt="" class="w-full" />
     </div>
@@ -21,13 +27,15 @@
     <nav
       class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50"
     >
-      <img
-        class="w-36 cursor-pointer mr-14"
-        src="./images/logo.png"
-        alt="Logo"
-      />
+      <a href=""
+        ><img
+          class="w-36 cursor-pointer mr-14"
+          src="./images/logo.png"
+          alt="Logo"
+      /></a>
+      <!-- nav-links -->
       <ul
-        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50"
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo"
       >
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -42,7 +50,7 @@
         </button>
 
         <a
-          class="hidden md:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+          class="hidden md:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo"
           href="#footer"
           >Hire Me<img src="./images/arrow-icon.png" alt="" class="w-3"
         /></a>
@@ -55,7 +63,7 @@
       <!--------------------------- mobile-menu-start --------------------------->
       <ul
         id="sideMenu"
-        class="flex md:hidden flex-col gap-5 py-20 px-10 fixed -right-64 top-0 bottom-0 w-[50%] z-50 h-screen bg-[#8ddfff] transition duration-500"
+        class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-[50%] z-50 h-screen bg-[#8ddfff] transition duration-500 font-Ovo"
       >
         <div class="absolute right-6 top-6" onclick="closeMenu()">
           <img
@@ -77,6 +85,9 @@
         <li>
           <a href="#contact" onclick="closeMenu()">Contact</a>
         </li>
+        <li>
+          <a href="#footer" onclick="closeMenu()">Hire Me</a>
+        </li>
       </ul>
       <!--------------------------- mobile-menu-end --------------------------->
     </nav>
@@ -88,15 +99,13 @@
       class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4"
     >
       <img src="images/profile-img.png" alt="" class="rounded-full w-48" />
-      <h3 class="text-xl md:text-2xl mb-3">Hi! I'm Rizwan Siddiqui</h3>
-      <h1 class="text-3xl sm:text-6xl lg:text-[66px]">
+      <h3 class="text-xl md:text-2xl mb-3 font-Ovo">Hi! I'm Rizwan Siddiqui</h3>
+      <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
         frontend web developer
       </h1>
-      <p class="max-w-2xl mx-auto">
-        An enthusiastic Front-End Developer proficient in HTML5, CSS3,
-        JavaScript & ReactJS. Committed to delivering efficient, responsive, and
-        engaging web solutions while fostering growth in web development
-        expertise.
+      <p class="max-w-2xl mx-auto font-Ovo">
+        Committed to delivering efficient, responsive & engaging web solutions
+        while fostering growth in web development expertise.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
@@ -109,7 +118,7 @@
         <a
           href="./images/Rizwan_Siddiqui_Resume-1.png"
           download
-          class="px-10 py-3 border rounded-full border-gray-500 bg-white flex items-center gap-2"
+          class="px-10 py-3 border border-gray-500 rounded-full bg-white flex items-center gap-2 my-resume"
           >My Resume <img src="./images/download-icon.png" alt="" class="w-4"
         /></a>
       </div>
@@ -118,7 +127,7 @@
 
     <!--------------------------- about-section-start --------------------------->
     <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 class="text-center mb-2 text-lg">Introduction</h4>
+      <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
       <h2 class="text-center text-5xl">About Me</h2>
       <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
         <div class="max-w-max mx-auto relative">
@@ -130,45 +139,51 @@
           <div
             class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center"
           >
-            <img src="./images/circular-text.png" alt="" class="w-full" />
+            <img
+              src="./images/circular-text.png"
+              alt=""
+              class="w-full animate-spin_slow"
+            />
             <img
               src="./images/dev_icon.png"
               alt=""
-              class="w-1/3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              class="w-2/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             />
           </div>
         </div>
         <div class="flex-1">
-          <p class="mb-10 max-w-2xl">
+          <p class="mb-10 max-w-2xl font-Ovo">
             I'm a front-end web developer skilled in HTML, CSS, JavaScript, and
             React. I'm passionate about building clean, responsive, and
             user-friendly interfaces. Currently, I'm expanding my skills through
             working on React projects.
           </p>
-          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl font-Ovo">
             <li
-              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#f2fdff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
             >
               <img src="./images/code-icon.png" alt="" class="w-7 mt-3" />
               <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
               <p>HTML5, CSS, JavaScript, Python, C++, Java</p>
             </li>
             <li
-              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#f2fdff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
             >
               <img src="./images/edu-icon.png" alt="" class="w-7 mt-3" />
               <h3 class="my-4 font-semibold text-gray-700">Education</h3>
               <p>IUBAT - BSc in Computer Science and Engineering</p>
             </li>
             <li
-              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#f2fdff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
             >
               <img src="./images/project-icon.png" alt="" class="w-7 mt-3" />
               <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
               <p>Built more than 10 projetcs</p>
             </li>
           </ul>
-          <h4 class="my-6 text-gray-700 font-semibold">Tools I Use:</h4>
+          <h4 class="mt-6 mb-2 text-gray-700 font-semibold font-Ovo">
+            Tools I Use:
+          </h4>
           <ul class="flex items-center gap-3 sm:gap-5">
             <li
               class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
@@ -204,11 +219,11 @@
     <!--------------------------- skills-section-start --------------------------->
     <div
       id="skills"
-      class="w-10/12 mx-auto my-10 flex flex-col justify-center items-center gap-5 scroll-mt-20"
+      class="w-full px-[12%] py-10 scroll-mt-20 flex flex-col justify-center items-center gap-5"
     >
       <div class="mb-10">
-        <h4 class="text-center mb-2 text-lg">Technologies I Use</h4>
-        <h2 class="text-center text-5xl">My Skills</h2>
+        <h4 class="text-center mb-2 text-lg font-Ovo">Technologies I Use</h4>
+        <h2 class="text-center text-5xl">Skills</h2>
       </div>
 
       <!-- HTML -->
@@ -279,12 +294,12 @@
     <!--------------------------- projects-section-start --------------------------->
     <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
       <div class="mb-20">
-        <h4 class="text-center mb-2 text-lg">Latest Works</h4>
-        <h2 class="text-center text-5xl">My Projects</h2>
+        <h4 class="text-center mb-2 text-lg font-Ovo">My Latest Works</h4>
+        <h2 class="text-center text-5xl">Projects</h2>
       </div>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 gap-5 lg:gap-10"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 gap-5 lg:gap-10 font-Ovo"
       >
         <!------- project-1 ------->
         <div
@@ -503,11 +518,11 @@
       id="contact"
       class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center"
     >
-      <h4 class="text-center mb-2 text-lg">Connect With Me</h4>
+      <h4 class="text-center mb-2 text-lg font-Ovo">Connect With Me</h4>
       <h2 class="text-center text-5xl">Get in touch</h2>
-      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
-        I'd love to hear from you! If you have any questions, comments or
-        feedback, please use the form below.
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+        I'd love to hear from you! If you have any questions or feedback, please
+        use the form below.
       </p>
       <form action="" class="max-w-2xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10 mb-8">
@@ -531,7 +546,7 @@
           class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
         ></textarea>
         <button
-          class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500"
+          class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 font-Ovo"
         >
           Submit Now
           <img src="./images/right-arrow-white.png" alt="" class="w-4" />
@@ -541,7 +556,7 @@
     <!--------------------------- contact-section-end --------------------------->
 
     <!--------------------------- footer-section-start --------------------------->
-    <div id="footer" class="mt-20">
+    <div id="footer" class="mt-20 font-Ovo">
       <div class="text-center">
         <img src="./images/logo.png" alt="" class="w-36 mx-auto mb-2" />
         <div
