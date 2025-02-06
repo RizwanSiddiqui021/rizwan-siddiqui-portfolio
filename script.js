@@ -71,3 +71,19 @@ function toggleTheme() {
     localStorage.theme = "light";
   }
 }
+
+// animated-text functions
+const textField = document.querySelector("#animated-text");
+let text = "I'm Rizwan Siddiqui...";
+
+function textTypingEffect(element, text, i = 0) {
+  element.textContent += text[i];
+
+  if (i === text.length - 1) {
+    return;
+  }
+
+  setTimeout(() => textTypingEffect(element, text, i + 1), 70);
+}
+
+textTypingEffect(textField, text);
